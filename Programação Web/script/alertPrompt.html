@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Alert e Prompt em JS </title>
+    <style type="text/css">
+        #bloco{
+            height: 30px;
+            width: 75px;
+            border: 1px solid #015252;
+        }
+    </style>
+</head>
+<body onkeypress="addStyle()">
+    <button type="button" onclick="obterDado()"> Get </button><br><hr> <!-- onclick = ele dita um evento -->
+    <button type="button" onclick="mensagem()"> Show </button><hr>  
+    <div onmousemove="mudarFundo()" id="content" style="width: 200px; height: 160px; background-color: #3137e9;"> </div> <hr> 
+    <div id="bloco"> Conteúdo </div> 
+    <script>
+        function obterDado(){
+          dado = window.prompt("Digite um Dado:");
+          alert(dado);
+        // console.log(dado); // Exibe no inspector
+        }
+        function mensagem(){
+            alert("Hello World, aqui é o 2º I!");
+        }
+        function mudarFundo(){
+            document.getElementById("content").style.backgroundColor = "#a29bfe"; // getElementById = Serve para pegar a função através do ID para modificar ou acrescentar algo
+        }
+        function addStyle(){
+            let element = document.getElementById("bloco");
+            element.style.cssText = 
+                                    'width: 75px;' + 
+                                    'height: 50px;' +
+                                    'background: #00cec9;' +
+                                    'border-radius: 10px;';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Desafio </title>
+</head>
+<body>
+    <H3>SALÁRIO</H3>
+    <form>
+        <p> Seu salário: <input type="text" id="nome" value="R$ 1800,00"></p>
+        <p> Seus Dependentes: <input type="number" id="depd"></p>
+        <p> Você é professor? <input type="text" id="prof"></p>
+        <p> Você teve algum Empréstimo? <input type="text" id="emp"></p>
+        <button type="button" onclick="getValues()"> validar </button>
+        <p> Salario Liquido: <input type="text" id="getsl" readonly> </p>
+    </form>
+    <script>
+        function getValues(){
+            let depd = document.getElementById("depd").value;
+            depd = depd * (2 / 100);
+            let prof = document.getElementById("prof").value;
+            if (prof == "Sim"){
+                prof = 4/100;
+            }else if (prof == "sim"){
+                prof = 4/100;
+            }else{
+                prof = 0;
+            }
+            let emp = document.getElementById("emp").value;
+            if (emp == "Sim"){
+                emp = 10/100;
+            }else if (emp == "sim"){
+                emp = 10/100;
+            }else{
+                emp = 0;
+            }
+            let sl = 1800 + (depd * 1800) + (prof * 1800) - (emp * 1800);
+            document.getElementById("getsl").value = sl;
+        }
+    </script>
+</body>
+</html>

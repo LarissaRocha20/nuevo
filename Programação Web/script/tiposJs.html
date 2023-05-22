@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tipos de Dados JS </title>
+</head>
+<body>
+    <script>
+        // var text1 = "Kaline";
+        // var text2 = "Alessandra";
+        // var text3 = "Larissa";
+        // alert(text1 + text2 + text3)
+        var num = parseInt(window.prompt("Digite um número")); // parseInt = converter um valor para o tipo inteiro // parseFloat = converte o valor para um número fracionário ou decimal
+        var num2 = parseInt(window.prompt("Digite outro número"));
+        console.log(typeof(num));
+        // num = parseInt(num); // converte para número inteiro
+        // num2 = parseInt(num2); // converte para número inteiro
+        var soma = num + num2;
+        console.log(soma);
+
+        console.log("Tipo inteiro e ponto flutuante são number no JS");
+
+        let valorInt = 0;
+        let valorFloat = 25.5;
+
+        console.log(typeof(valorInt)); // tipos são number
+        console.log(typeof(valorFloat)); // tipos são number
+
+        console.log(parseInt(27.8)); // remove a parte fracionária
+
+        var stringNum = "10" ;
+        stringNum = parseInt(stringNum);
+        alert(stringNum + num2);
+        console.log( typeof(stringNum));
+
+        console.log("Tipo String")
+
+        var string1 = ""; // string vazia, sem valor
+        console.log(typeof(string1));
+        var string2 = "125";
+        console.log(typeof(string2));
+        var string3 = "Amélia";
+        var tamString3 = string3.length; // pegar a quantidade de caracteres 
+        console.log(tamString3) // 6 caracteres
+        console.log(typeof(string3));
+
+        console.log("Tipo Boolean(Lógico)");
+        var bool1 = true;
+        var bool2 = false;
+        console.log(typeof(bool1));
+
+        var bol = 1220;
+        console.log(Boolean(bol));
+        // console.log(!!bol);
+        if(bol == true){
+            console.log ("Execute os comandos!");
+        }else{
+            console.log ("Execute os comandos do else!");
+        }
+    </script> 
+</body>   
+</html>

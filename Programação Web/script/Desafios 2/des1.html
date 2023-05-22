@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Desafio 01 </title>
+</head>
+<body>
+    <header>
+        <h2> Estoque de livros </h2>
+        <hr>
+    </header>
+    <div>
+        Estoque da Corte:<br><input type="number" name="estoq" id="esto"><br>
+        Vendidos:<br><input type="number" name="vend" id="ven"><br>
+        <br>
+        <input type="button" value="verificar" onclick="myLoja()">
+    </div>
+    <hr>
+    <div>
+        Estoque de Bridgerton:  <br><input type="number" name="estoq" id="est"><br>
+        Vendidos:<br><input type="number" name="vend" id="ve"><br>
+        <br>
+        <input type="button" value="verificar" onclick="verificar()">
+    </div>
+    <hr>
+    <div>
+        Estoque de Cinquenta Tons:<br><input type="number" name="estoq" id="esti"><br>
+        Vendidos:<br><input type="number" name="vend" id="ved"><br>
+        <br>
+        <input type="button" value="verificar" onclick="executar()">
+    </div>
+
+    <script>
+        function myLoja(){
+            let estoque = []
+            let vendidos = []
+            let total = []
+            estoque[0] = document.querySelector('input#esto').value
+            console.log(estoque[0]) 
+            vendidos[0] = document.querySelector('input#ven').value 
+            console.log(vendidos[0])
+            total.push= estoque[0] - vendidos[0]
+            alert("Restante no estoque: " + total.push)
+          
+        }
+        myLoja();
+
+        function verificar(){
+            let estoqu = []
+            let venda = []
+            let resul = []
+            estoqu[0] = document.querySelector('input#est').value
+            console.log(estoqu[0]) 
+            venda[0] = document.querySelector('input#ve').value 
+            console.log(venda[0])
+            resul[0] = estoqu[0] - venda[0]
+            alert("Restante no estoque: " + resul[0]) 
+        }
+
+        function executar(){
+            let estoq = []
+            let vend = []
+            let resu = []
+            estoq[0] = document.querySelector('input#esti').value
+            console.log(estoq[0]) 
+            vend[0] = document.querySelector('input#ved').value 
+            console.log(vend[0])
+            resu[0] = estoq[0] - vend[0]
+            alert("Restante no estoque: " + resu[0]) 
+        }
+
+    </script>
+</body>
+</html>

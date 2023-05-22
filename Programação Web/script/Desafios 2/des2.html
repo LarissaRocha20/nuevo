@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Desafio 2 </title>
+</head>
+<body>
+    <header>
+        <h2> Gerenciamento de Projetos </h2>
+        <hr>
+    </header>
+       Coloque o nome do seu projeto:<br> <input type="text" name="nome" id="name"><br>
+       Quantas horas você demorou para finalizar o seu projeto:<br><input type="number" name="hora" id="hor"><br>
+       <label for="proj"> Seu projeto foi finalizado? </label><br>
+        <select id="boo"><br>
+            <option value="true"> Sim </option>
+            <option value="false"> Não </option>
+        </select><br>
+        <br>
+        <input type="button" value="verificar" onclick="verificar()">
+    <script>
+        function verificar(){
+            let ProdNome = []
+            let ProdHor = []
+            let Prodboll = []
+            ProdNome[0] =  document.querySelector('input#name').value
+            console.log(ProdNome[0])
+            ProdHor[0] =  document.querySelector('input#hor').value
+            console.log(ProdHor[0])
+            Prodboll[0] =  document.querySelector('select#boo').value
+            console.log(Prodboll[0])
+            alert("Nome: "+ ProdNome[0]+ "   " + 
+                  "Horas: "+ProdHor[0]+ "   " +
+                  "Concluído: "+ Prodboll[0])
+        }
+    </script>
+</body>
+</html>

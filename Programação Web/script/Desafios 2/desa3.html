@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 3</title>
+</head>
+<body>
+    <p id="demos"></p>
+
+    <script>
+
+    const filme = {
+      titulo: "A origem dos guardiões",
+      lancamento : "2012",
+      diretor: "Peter Ramsey",
+      genero: "Aventura",
+      perso2:{
+                    nome: "Pitch Black",
+                    interpretadora: "Jude Law"
+                },
+                perso3:{
+                    nome: "Norte",
+                    interpretadora: "Alec Baldwin"
+                },
+     informacoes : function() {
+        return "Filme: " + this.titulo + "  Gênero: " + this.genero;
+      }
+    }
+    
+    // Display data from the object:
+    document.getElementById("demos").innerHTML = filme.informacoes();
+    </script>
+    
+    
+</body>
+</html>

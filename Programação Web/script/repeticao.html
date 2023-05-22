@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Atividade </title>
+</head>
+<body>
+<header> <h2> Estruturas de Repetição </h2> </header>
+<script>
+console.log("------ Estrutura de Repetição For ------")
+
+console.log("Exemplo do Decremento da variável i")
+
+for(let i = 7; i > 2; i--){ // Decrementando
+    console.log(i) 
+}
+
+console.log("Exemplo do Incremento da variável i")
+
+for(let i = 0; i < 7; i++){ // Incrementando
+    console.log(i)
+}
+
+console.log("Podemos usar o FOR para buscar valores em VETORES/ARRAYS")
+
+let nomes = ["Larissa","Rebeca","Clivis","Camilly"]
+let c = nomes.length
+
+for(let i = 0; i < c; i++ ) { 
+    console.log(nomes[i])
+}
+
+console.log("------ Estrutura de Repetição While ------")
+
+let controle = 0   
+while(controle < 7){    
+ console.log(`${controle} - Javascript`)    
+ console.log()   
+ controle++  
+}
+
+let nome = ["Larissa","Rebeca","Clivis","Camilly"]
+
+let cont = 0
+
+while(cont < nome.length){ 
+    console.log(cont+ '-' +nome[cont]);
+    cont++
+   }
+
+//Também tem essa forma, mas não pode executar pois pode causar travamentos no ambiente de execução
+/* 
+let contador = true;   
+while(contador == true){ 
+   console.log("Comandos executados enquato o programa estiver em execução"); 
+}
+*/
+
+console.log("------ Estrutura de Repetição Do-While ------")
+
+do {
+    console.log("Executado pelo menos uma vez")
+  }while(false) 
+
+console.log("------ Estrutura de Repetição FOR IN ------")
+  
+let objeto = {1:"Lua", 2:"Sol", 3:"Estrela", 4: "Saturno", 5:"Netuno"}
+  
+for(let prop in objeto) {
+        console.log("Palavra: "+ prop +" - "+objeto[prop])
+    } 
+    
+
+console.log("Percorrer Objetos"); 
+
+const pessoa = { 
+        nome:"Luna",
+        idade: 16,
+        peso: 59,
+        altura: 1.67
+    } 
+    
+    
+for(let atributo in pessoa){ 
+        console.log(pessoa[atributo])
+    }
+ 
+  
+console.log("For In para Interar Vetores") 
+  
+let nom = ["Larissa","Rebeca","Clivis","Camilly"]
+  
+for(let element in nom) {
+        console.log("Nome: " + element + " - " + nom[element])
+    } 
+  
+console.log("------ Estrutura de reptição For Of ------")
+  
+let cursos = ["Sistemas de Informação","Ciências da Computação","Análise de Sistemas","Engenharia de Software"]
+  
+for(let curso of cursos){
+      console.log("Faculdade: - "+ curso)
+    }
+  
+let valFixos = [10, 20, 30]
+  
+for (const value of valFixos) {
+    console.log(value); 
+    }
+ 
+  
+console.log("Usando FOR OF para Arrays de Objetos"); 
+  
+const infoPessoa = [ 
+            {nome: "Larissa", idade: 15, altura:1.67},
+            {nome: "Rebeca", idade: 20, altura:1.6},
+            {nome: "Clivis", idade: 18, altura:1.6},
+            {nome: "Aparecida", idade: 55, altura:1.6},
+            {nome: "Camilly", idade: 20, altura:1.6}
+        ]
+  
+for (let funcionario of infoPessoa){
+      console.log(funcionario.nome + " - " + funcionario.idade + " - " + funcionario.altura)
+    }  
+  
+console.log("------ Estrutura de Repetição ForEach ------"); 
+  
+let numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  
+function tabuadaDe2(item) { 
+      console.log(item*2)
+    }
+  
+numeros.forEach(tabuadaDe2) 
+  
+let val = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var total = 0;
+  
+function somar(item, indice) {
+      total += item
+      console.log("Posição:" + indice + " - Soma = " + total)
+    }
+  
+numeros.forEach(somar)
+  
+let nom1 = ["Larissa","Rebeca","Clivis","Camilly"] 
+
+nom1.forEach(function(item,indice){ 
+     console.log(indice + " = " + item) 
+  });
+
+    </script>
+</body>
+</html>

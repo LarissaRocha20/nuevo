@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Tipos Var Let e Const </title>
+</head>
+<body>
+    <script>
+        var disciplina = "Fundamentos de Programação"; // global - pode ser chamada a qualquer momento e é público
+
+        function modificaDisciplina(){
+            disciplina = "Lógica de Programação";
+        }
+        modificaDisciplina(); // chama a função
+        if(true){
+            disciplina = "Programação Web!";
+        }
+        var i = 0;
+        while(i < 5){
+            disciplina = "Sistemas Operacionais!";
+            i++;
+        }
+
+        { //bloco de código
+            disciplina = "Gestão de Tempo!";
+        }
+
+        console.log(disciplina);
+
+        console.log("----Escopo de Função do Tipo VAR----");
+
+        media(7,8);
+
+        function media(n1,n2){
+            var med = (n1+n2)/2; //escopo de função - pois ela foi declarada dentro da função
+            console.log(med);
+        }
+
+        // media(7,8);//Tanto faz em cima como embaixo
+        // console.log(med); // fora da função que a variavél foi declara o acesso não é permitido
+
+        var escola = "Lucas Emmanuel";
+        console.log(escola);
+        var escola = "Amélia Figueiredo!!!";
+        console.log(escola);
+
+        //O tipo var só permite função de global e function
+
+        console.log("------------------------------------");
+
+        console.log("---------Escopo do tipo LET---------");
+
+        let professor = "João Victor";
+        function modProd(){
+            professor = "Rivânio";
+        }
+        modProd();
+        console.log(professor);
+
+        if(true){
+            professor = "Francisco Dias";
+        }
+        console.log(professor);
+
+        function quadrado(valor){
+            let quad = valor * valor;
+            console.log(quad); // Acesso permitido!!
+        }
+        quadrado(5);
+        // console.log(quad); // Fora da função que a variavél foi declara o acesso não é permitido
+
+    { // Escopo de bloco
+        let curso= "Administração";
+        console.log(curso);// acesso permitido somente dentro da função que a variavél foi declarada
+    }
+    // console.log(curso);// acesso negado
+
+    if(true){
+        let salario = 1950; 
+        console.log(salario); // acesso permitido somente dentro da função que a variavél foi declarada
+    }
+    // console.log(salario); // acesso negado
+
+    //O tipo let permite função de global, function e bloco
+
+    let numero = 125;
+        numero = 130;
+
+    console.log(numero);
+
+    console.log("----------Constante e escopo----------");
+    // Uma constante não pode ter o valor modificado durante a execução do programa.
+    // O valor não pode ser alterado
+    // Escopo das constantes no JS são iguais ao tipo LET, ou seja, possui escopo de bloco, local(função) e global.
+
+    const pi = 3.14;
+
+    // pi = 3.15; // Erro formado
+
+    { // Escopo de bloco simples
+        const desconto = 5;  
+        console.log(desconto); // Precisa estar dentro do escopo junto com a constante para poder ser acessado 
+    }
+
+    // console.log(desconto); // Não acessa
+
+    const tol = 10; // Escopo global = acesso de qualque função de qualquer local
+
+    function Tolerancia(res){ // Escopo local =  escopo de bloco  ou  escopo de if  e Escopo de função = é quando esta dentro de um função 
+        // const tol = 10; // Não fica visivel
+
+        let tolMin = res - (tol/100) * res;
+        console.log(tolMin); // Resultado = 90
+    }
+
+    Tolerancia(100);
+
+    function tolMax(res,tol){
+        let tolMax = res + (tol/100) * res;
+        console.log(tolMax);
+    }
+
+    tolMax(100,tol); // Erro: tol não é visivel
+
+    </script>
+</body>
+</html>
